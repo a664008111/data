@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="format-detection" content="telphone=no, email=no,address=no">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <link rel="stylesheet" type="text/css" href="css/swiper-3.4.2.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="font/iconfont.css">
+</head>
+<body>
+    <div class="box">
+        <header>
+            <i class="icon iconfont icon-kefu"></i>
+            <form>
+                <i class="icon iconfont icon-fangdajing"></i>
+                <input type="text" name="" placeholder="给你推荐 最好的歌">
+            </form>
+            <i class="icon iconfont icon-xiaoxi"></i>
+        </header>
+        <section>
+            <div class="list">
+                <span><b class="active">音乐</b></span>
+                <span><b>视频</b></span>
+                <span><b>电台</b></span>
+            </div>
+            <div class="lun swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="img/1.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="img/2.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="img/3.jpg" alt=""></div>
+                </div>
+            </div>
+            <div class="text">
+                <span><i class="icon iconfont icon-yinlezanting"></i><b>私人FM</b></span>
+                <span><i class="icon iconfont icon-suiji2"></i><b>每日推荐</b></span>
+                <span><i class="icon iconfont icon-wode"></i><b>歌单</b></span>
+                <span><i class="icon iconfont icon-snapchat"></i><b>排行榜</b></span>
+            </div>
+            <div class="left">
+                <h3>推荐歌单 ></h3>
+                <div class="dll">
+                <dl>
+                    <dt><img src="img/4.png" alt=""></dt>
+                    <dd>遇梦 | 听梦不愿醒</dd>
+                </dl>
+                <dl>
+                    <dt><img src="img/4.png" alt=""></dt>
+                    <dd>遇梦 | 听梦不愿醒</dd>
+                </dl>
+                <dl>
+                    <dt><img src="img/4.png" alt=""></dt>
+                    <dd>遇梦 | 听梦不愿醒</dd>
+                </dl>
+                <dl>
+                    <dt><img src="img/4.png" alt=""></dt>
+                    <dd>遇梦 | 听梦不愿醒</dd>
+                </dl>
+                <dl>
+                    <dt><img src="img/4.png" alt=""></dt>
+                    <dd>遇梦 | 听梦不愿醒</dd>
+                </dl>
+                <dl>
+                    <dt><img src="img/4.png" alt=""></dt>
+                    <dd>遇梦 | 听梦不愿醒</dd>
+                </dl>
+                <dl>
+                    <dt><img src="img/4.png" alt=""></dt>
+                    <dd>遇梦 | 听梦不愿醒</dd>
+                </dl>
+                <dl>
+                    <dt><img src="img/4.png" alt=""></dt>
+                    <dd>遇梦 | 听梦不愿醒</dd>
+                </dl>
+                <dl>
+                    <dt><img src="img/4.png" alt=""></dt>
+                    <dd>遇梦 | 听梦不愿醒</dd>
+                </dl>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <span><i class="icon iconfont icon-yinlezanting"></i><b>发现音乐</b></span>
+            <span><i class="icon iconfont icon-suiji2"></i><b>我的音乐</b></span>
+            <span><i class="icon iconfont icon-wode"></i><b>朋友</b></span>
+            <span><i class="icon iconfont icon-snapchat"></i><b>账号</b></span>
+        </footer>
+    </div>
+    <script src="js/jquery-3.2.min.js"></script>
+    <script src="js/swiper-3.4.2.min.js"></script>
+    <script>
+        new Swiper(".lun",{
+            autoplay:1000,
+            loop:true
+        })
+        $.ajax({
+            url:"data.json",
+            success:function(data){
+                console.log(data)
+            }
+        })
+    </script>
+</body>
+</html>
