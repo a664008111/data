@@ -43,42 +43,7 @@
             <div class="left">
                 <h3>推荐歌单 ></h3>
                 <div class="dll">
-                <dl>
-                    <dt><img src="img/4.png" alt=""></dt>
-                    <dd>遇梦 | 听梦不愿醒</dd>
-                </dl>
-                <dl>
-                    <dt><img src="img/4.png" alt=""></dt>
-                    <dd>遇梦 | 听梦不愿醒</dd>
-                </dl>
-                <dl>
-                    <dt><img src="img/4.png" alt=""></dt>
-                    <dd>遇梦 | 听梦不愿醒</dd>
-                </dl>
-                <dl>
-                    <dt><img src="img/4.png" alt=""></dt>
-                    <dd>遇梦 | 听梦不愿醒</dd>
-                </dl>
-                <dl>
-                    <dt><img src="img/4.png" alt=""></dt>
-                    <dd>遇梦 | 听梦不愿醒</dd>
-                </dl>
-                <dl>
-                    <dt><img src="img/4.png" alt=""></dt>
-                    <dd>遇梦 | 听梦不愿醒</dd>
-                </dl>
-                <dl>
-                    <dt><img src="img/4.png" alt=""></dt>
-                    <dd>遇梦 | 听梦不愿醒</dd>
-                </dl>
-                <dl>
-                    <dt><img src="img/4.png" alt=""></dt>
-                    <dd>遇梦 | 听梦不愿醒</dd>
-                </dl>
-                <dl>
-                    <dt><img src="img/4.png" alt=""></dt>
-                    <dd>遇梦 | 听梦不愿醒</dd>
-                </dl>
+
                 </div>
             </div>
         </section>
@@ -97,11 +62,26 @@
             loop:true
         })
         $.ajax({
-            url:"data.json",
+            url:"data/data.json",
             success:function(data){
-                console.log(data)
+                var arr=data
+                init(arr)
             }
         })
+        function init(arr){
+            var str=""
+            $.each(arr,function(i,v){
+                str+=`<dl>
+                    <dt><img src="${v.img}" alt=""></dt>
+                    <dd>${v.span}</dd>
+                </dl>`
+            })
+            $(".dll").html(str)
+        }
+        $("footer").on("click","span",function(){
+            $(this).addClass('active').siblings().removeClass('active')
+        })
+
     </script>
 </body>
 </html>

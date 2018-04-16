@@ -23,12 +23,12 @@ gulp.task("readhtml",function(){
 gulp.task("readjs",function(){
     gulp.src("!js/*.min.js")
     .pipe(mins())
-    .pipe(gulp.dest("dist"))
+    .pipe(gulp.dest("dist/js"))
 })
 gulp.task("server",function(){
    gulp.src(".")
    .pipe(server({
-    port:8090,
+        port:8090,
         open:true,
         livereload:true,
         middlewras:function(req,res,next){
